@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Webbie for U</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image:url('littlekid.jpg');
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">WHY I LOVE U</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">ETC</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Me loves you sommach</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">my<br>Love ♡ </span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">21.06.2024</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">YOU⸜(｡˃ ᵕ ˂ )⸝♡</span></h5>
+    <p>I love you because you are you !!!</p>
+    <p>A hard-working, patient and kind-hearted man. You are such a precious person for me. They way you talk to me, the way you treat people you love. I love your eyes, your smile, your voice, your smell, your warm hands, your shoulder i always lay my head on, every single thinggg. It's such a blessing to have you in my life. Let's stick together through thick and thin.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"I want all of you, forever, you and me, every day."</i></p>
+      <p>-Noah from the Notebook</p>
+    </div>
+    <img src="photobooth.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p>Let's take more photobooth pics !!</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">ETC</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Date Bucket List</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Songs of you</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Aquaria</h5>
+      <p class="w3-text-grey">Lame i know but pleaseeee</p><br>
+    
+      <h5>Art Dates</h5>
+      <p class="w3-text-grey">Painting or Tufting ??</p><br>
+    
+      <h5>Musem</h5>
+      <p class="w3-text-grey">For the gramm ! jk it's a calm and peaceful date. I really wanna go to van gogh's exhibition with u</p><br>
+    
+      <h5>Genting Skyworld</h5>
+      <p class="w3-text-grey">It's gonna be soo much fun trust me</p><br>
+    
+      <h5>Arcade</h5>
+      <p class="w3-text-grey">Just cutee</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Lucky</h5>
+      <p class="w3-text-grey">Jason Mraz</p><br>
+    
+      <h5>Soft Spot</h5>
+      <p class="w3-text-grey">Keshi</p><br>
+    
+      <h5>I Like Me Better</h5>
+      <p class="w3-text-grey">Lauv</p><br>
+    
+      <h5>Bad</h5>
+      <p class="w3-text-grey">Wave to Earth</p><br>
+    
+      <h5>I.F.L.Y</h5>
+      <p class="w3-text-grey">Bazzi</p>
+    </div>  
+    <img src="mirror.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
